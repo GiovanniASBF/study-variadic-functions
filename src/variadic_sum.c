@@ -27,3 +27,10 @@ int variadic_sum(int count, ...)
     va_end(args);
     return (total);
 }
+
+int main(void)
+{
+    printf("Sum of 1, 2, 3: %d\n", variadic_sum(3, 1, 2, 3));
+    printf("Sum of 10, 20, 30, 40, 50: %d\n", variadic_sum(5, 10, 20, 30, 40, 50));
+    printf("Sum of 2, -1: %d\n", variadic_sum(2, 2, -1));
+}
