@@ -11,4 +11,21 @@ public class SimpleLogger {
             System.out.println(formattedMessage);
         }
     }
+
+    public static void main(String[] args) {
+        String user;
+        int transactionId;
+        double amount;
+    
+        user = "Alice";
+        transactionId = 42;
+        amount = 99.95;
+    
+        log("Server started at 8080");
+        log("User {} logged in.", user);
+        log("New transaction {} for {} for the user {}.", transactionId, amount, user);
+        // The type's security is assured. The compiler convert the types
+        // (int, double) to their coresponding objects (Integer, Double)
+        // and put them into 'args' array
+    }
 }
